@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a5c8e7c778563dc8b9e39be192be23d3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a5c8e7c778563dc8b9e39be192be23d3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a5c8e7c778563dc8b9e39be192be23d3 = L.map(
+                "map_a5c8e7c778563dc8b9e39be192be23d3",
+                {
+                    center: [56.01157, 37.869981],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3eaefe6cd06182132a03ccbe3f7b0c44 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_3eaefe6cd06182132a03ccbe3f7b0c44.addTo(map_a5c8e7c778563dc8b9e39be192be23d3);
+        
+    
+            var marker_891500b4a9ddbe3bed64a0288f5140b6 = L.marker(
+                [55.793715269089304, 37.80991103302723],
+                {}
+            ).addTo(map_a5c8e7c778563dc8b9e39be192be23d3);
+        
+    
+            var icon_297f123c330624e4982c247b42fd9693 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_891500b4a9ddbe3bed64a0288f5140b6.setIcon(icon_297f123c330624e4982c247b42fd9693);
+        
+    
+        var popup_b06eb6dc0642787d1b354adee107875f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7dea5639138953edec52c9728bd13492 = $(`<div id="html_7dea5639138953edec52c9728bd13492" style="width: 100.0%; height: 100.0%;">Кофейня Fresh bar</div>`)[0];
+                popup_b06eb6dc0642787d1b354adee107875f.setContent(html_7dea5639138953edec52c9728bd13492);
+            
+        
+
+        marker_891500b4a9ddbe3bed64a0288f5140b6.bindPopup(popup_b06eb6dc0642787d1b354adee107875f)
+        ;
+
+        
+    
+    
+            var marker_d62fef12d44035904a47508cbb9b9b55 = L.marker(
+                [55.79107876761284, 37.809851999999985],
+                {}
+            ).addTo(map_a5c8e7c778563dc8b9e39be192be23d3);
+        
+    
+            var icon_4eb97d957ea3b23975dc565ca20eb469 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d62fef12d44035904a47508cbb9b9b55.setIcon(icon_4eb97d957ea3b23975dc565ca20eb469);
+        
+    
+        var popup_7340aac778d433e1ab2094eb8f439b41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96b541b411464eeb45977fc506161ebf = $(`<div id="html_96b541b411464eeb45977fc506161ebf" style="width: 100.0%; height: 100.0%;">Кофейня «Мировая Чашка»</div>`)[0];
+                popup_7340aac778d433e1ab2094eb8f439b41.setContent(html_96b541b411464eeb45977fc506161ebf);
+            
+        
+
+        marker_d62fef12d44035904a47508cbb9b9b55.bindPopup(popup_7340aac778d433e1ab2094eb8f439b41)
+        ;
+
+        
+    
+    
+            var marker_969622aaa6f34b0233a72ef25fa5883a = L.marker(
+                [55.774108762674246, 37.82772299999999],
+                {}
+            ).addTo(map_a5c8e7c778563dc8b9e39be192be23d3);
+        
+    
+            var icon_e97ca398b8fe5cc31d3b29f18dc1083a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_969622aaa6f34b0233a72ef25fa5883a.setIcon(icon_e97ca398b8fe5cc31d3b29f18dc1083a);
+        
+    
+        var popup_bd437ef9a834e87355a474728d1d2301 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fca913030ef0b9691a3977db72eb9f71 = $(`<div id="html_fca913030ef0b9691a3977db72eb9f71" style="width: 100.0%; height: 100.0%;">Кофейня «Маэстро Кофе»</div>`)[0];
+                popup_bd437ef9a834e87355a474728d1d2301.setContent(html_fca913030ef0b9691a3977db72eb9f71);
+            
+        
+
+        marker_969622aaa6f34b0233a72ef25fa5883a.bindPopup(popup_bd437ef9a834e87355a474728d1d2301)
+        ;
+
+        
+    
+    
+            var marker_da533af7b1b712f222f32c395b8a6519 = L.marker(
+                [55.771941762044136, 37.83270399999999],
+                {}
+            ).addTo(map_a5c8e7c778563dc8b9e39be192be23d3);
+        
+    
+            var icon_bfaffbc3522da40d95b53bf70463e086 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da533af7b1b712f222f32c395b8a6519.setIcon(icon_bfaffbc3522da40d95b53bf70463e086);
+        
+    
+        var popup_de88a29c9823b84e132a2ceab1f80f06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_086a9caf537650471b94527468a0650e = $(`<div id="html_086a9caf537650471b94527468a0650e" style="width: 100.0%; height: 100.0%;">Кофе с собой</div>`)[0];
+                popup_de88a29c9823b84e132a2ceab1f80f06.setContent(html_086a9caf537650471b94527468a0650e);
+            
+        
+
+        marker_da533af7b1b712f222f32c395b8a6519.bindPopup(popup_de88a29c9823b84e132a2ceab1f80f06)
+        ;
+
+        
+    
+    
+            var marker_54e28d783c47929c1ccccc317cdc8af6 = L.marker(
+                [55.78903176701672, 37.784695000000006],
+                {}
+            ).addTo(map_a5c8e7c778563dc8b9e39be192be23d3);
+        
+    
+            var icon_202460d1e5e3cb21354ef785c0c5cf2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_54e28d783c47929c1ccccc317cdc8af6.setIcon(icon_202460d1e5e3cb21354ef785c0c5cf2d);
+        
+    
+        var popup_80812eb1e7fbf75fb8398662240e2f1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f41a8348e98fb66da256bd8929dc1510 = $(`<div id="html_f41a8348e98fb66da256bd8929dc1510" style="width: 100.0%; height: 100.0%;">Eco coffee</div>`)[0];
+                popup_80812eb1e7fbf75fb8398662240e2f1b.setContent(html_f41a8348e98fb66da256bd8929dc1510);
+            
+        
+
+        marker_54e28d783c47929c1ccccc317cdc8af6.bindPopup(popup_80812eb1e7fbf75fb8398662240e2f1b)
+        ;
+
+        
+    
+</script>
+</html>
