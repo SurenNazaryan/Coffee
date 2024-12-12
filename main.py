@@ -1,8 +1,9 @@
 import json
 import requests
 from geopy import distance
-from pprint import pprint
 import folium
+import os
+from dotenv import load_dotenv
 
 
 def fetch_coordinates(apikey, address):
@@ -36,18 +37,25 @@ def get_distance(coffee_shop):
 
 
 def main():
-    apikey = 'dcac427d-421d-434a-9777-fa8374c1bc3f'
+    load_dotenv()
+    apikey = os.getenv('APIKEY')
     my_address = input("Где вы находитесь?")
     my_coords = fetch_coordinates(apikey, my_address)
+    my_coords = (my_coords[1], my_coords[0])
     with open("coffee.json", "r", encoding="CP1251") as my_file:
         file_contents = my_file.read()
     content = json.loads(file_contents)
-    m = folium.Map(location=[my_coords[1], my_coords[0]], zoom_start=10)
+    m = folium.Map(location=[my_coords[0], my_coords[1]], zoom_start=10)
+    folium.Marker(
+        location=[my_coords[0], my_coords[1]],
+        popup="Ваше местонахождение",
+        icon=folium.Icon(color="red"),
+    ).add_to(m)
     coffe_list = []
     for i in range(len(content)):
         coffe_coords = (
-            content[i]["Longitude_WGS84"],
-            content[i]["Latitude_WGS84"]
+            content[i]["Latitude_WGS84"],
+            content[i]["Longitude_WGS84"]
         )
         coffe_dict = {
             'title': content[i]["Name"],
@@ -64,11 +72,10 @@ def main():
                 sorted_coffe_list[:5][i]['longitude']
             ],
             popup=sorted_coffe_list[:5][i]['title'],
-            icon=folium.Icon(icon='cloud')
+            icon=folium.Icon(icon='coffee', prefix='fa')
         ).add_to(m)
     m.save('map.html')
 
 
 if __name__ == '__main__':
     main()
-    
